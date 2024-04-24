@@ -1,14 +1,15 @@
 import React from "react";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { IoMdArrowDropright, IoMdArrowDropleft } from "react-icons/io";
+
 const BottomSection = () => {
   return (
-    <div className="flex justify-between mt-5">
-      <button className="bg-white p-1 rounded-lg">
-        <IoIosArrowBack color="black" size={30} />
+    <div className="flex justify-between items-center mt-5">
+      <button className="bg-white  rounded-lg">
+        <IoMdArrowDropleft color="black" size={30} />
       </button>
-      <h1>by</h1>
-      <button className="bg-white p-1 rounded-lg">
-        <IoIosArrowForward color="black" size={30} />
+      <h1>PUT ON CLOTHING </h1>
+      <button className="bg-white rounded-lg">
+        <IoMdArrowDropright color="black" size={30} />
       </button>
     </div>
   );

@@ -3,6 +3,12 @@ import TextInput from "./TextInput";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const TopSection = () => {
+  const currentDate = new Date();
+  const currentDay = currentDate.getDate();
+  const currentMonth = currentDate.toLocaleString("default", {
+    month: "short",
+  });
+
   return (
     <div className="flex flex-col space-y-5 items-center  md:justify-between md:space-y-0 md:flex-row ">
       {/* Level and Timer */}
@@ -38,15 +44,15 @@ const TopSection = () => {
       </div>
       {/* Navigation Buttons */}
       <div className="flex items-center">
-        <button className="bg-white p-1 rounded-lg">
-          <IoIosArrowBack color="black" size={30} />
+        <button className="bg-white p-2 rounded-lg">
+          <IoIosArrowBack color="black" size={20} />
         </button>
-        <div className="bg-white w-20  rounded-lg text-center mx-1">
-          <h1 className="text-sm font-semibold">24th Apr</h1>
-          <p className="text-sm font-semibold">17%</p>
+        <div className="flex flex-col bg-white items-center justify-center rounded-lg p-1 mx-1 w-[70px] ">
+          <h1 className="text-[10px] font-bold">{`${currentDay}th ${currentMonth}`}</h1>
+          <p className="text-[10px] font-bold">17%</p>
         </div>
-        <button className="bg-white p-1 rounded-lg">
-          <IoIosArrowForward color="black" size={30} />
+        <button className="bg-white p-2 rounded-lg">
+          <IoIosArrowForward color="black" size={20} />
         </button>
       </div>
     </div>
